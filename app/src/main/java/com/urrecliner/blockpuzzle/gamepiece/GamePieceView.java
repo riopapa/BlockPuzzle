@@ -15,20 +15,21 @@ import com.urrecliner.blockpuzzle.game.GameEngineBuilder;
 import com.urrecliner.blockpuzzle.playingfield.PlayingFieldView;
 
 /**
- * Im unteren Bereich die View Komponente, die ein Spielstein (oder einen leeren Spielstein) enthält.
- * Aus der TeilView erfolgt die Drag-and-Drop Operation.
- * Die 4. TeilView ist das Parking Area zum vorübergehenden Ablegen eines Teil.
- * Teil ist der alte Name für Spielstein; daher TeilView.
- */
+ * 하단에 타일(또는 빈 타일)이 포함된 뷰 구성 요소.
+ * 끌어서 놓기 작업은 부분 보기에서 수행됩니다.
+ * 4번째 PartView는 일시적으로 부품을 떨어뜨릴 수 있는 주차 공간입니다.
+ * 부분은 토큰의 이전 이름입니다. 따라서 PartView.
+ **/
+
 @SuppressLint("ViewConstructor")
 public class GamePieceView extends View implements IGamePieceView {
-    // Stammdaten
+    // basic data
     private final int index;
     private final boolean parking;
     private final BlockTypes blockTypes;
     private final BlockDrawParameters p = new BlockDrawParameters();
 
-    // Zustand
+    // status
     private GamePiece gamePiece = null;
     /** grey wenn Teil nicht dem Quadrat hinzugefügt werden kann, weil kein Platz ist */
     private boolean grey = false; // braucht nicht zu persistiert werden
@@ -48,7 +49,7 @@ public class GamePieceView extends View implements IGamePieceView {
         initParkingAreaColor();
 
         blockTypes = new BlockTypes(this);
-        greyBD = ColorBlockDrawer.byRColor(this, R.color.colorGrey, R.color.colorGrey, R.color.colorGrey);
+        greyBD = ColorBlockDrawer.byRColor(this, R.color.colorGreyHa, R.color.colorGreyHa, R.color.colorGreyHa);
     }
 
     @Override
@@ -136,7 +137,7 @@ public class GamePieceView extends View implements IGamePieceView {
 
     public void onDragEnter() {
         if (gamePiece == null) {
-            p_parking.setColor(getResources().getColor(R.color.colorParkingHover));
+            p_parking.setColor(getResources().getColor(R.color.colorParkingHoverHa));
             draw();
         }
     }
@@ -147,6 +148,6 @@ public class GamePieceView extends View implements IGamePieceView {
     }
 
     private void initParkingAreaColor() {
-        p_parking.setColor(getResources().getColor(R.color.colorParking));
+        p_parking.setColor(getResources().getColor(R.color.blue));
     }
 }

@@ -12,7 +12,7 @@ import com.urrecliner.blockpuzzle.block.special.ISpecialBlock;
 import com.urrecliner.blockpuzzle.block.special.LockBlock;
 import com.urrecliner.blockpuzzle.block.special.StarBlock;
 
-// Bauplan für alle Blöcke
+// BluePrint for all blocks
 public class BlockTypes {
     public static final int ONE_COLOR = 10;
     public static final int OLD_ONE_COLOR = 11;
@@ -23,7 +23,7 @@ public class BlockTypes {
     private final View view;
     private final List<ISpecialBlock> specialBlockTypes = new ArrayList<>();
     public static final int MIN_SPECIAL = 20;
-    public static final int MAX_SPECIAL = 29; // TO-DO Ich muss die 30er umziehen, um mehr Platz zu bekommen
+    public static final int MAX_SPECIAL = 29; // TO-DO 더 많은 공간을 확보하려면 30대를 옮겨야 합니다.
 
     public BlockTypes(View view) {
         this.view = view;

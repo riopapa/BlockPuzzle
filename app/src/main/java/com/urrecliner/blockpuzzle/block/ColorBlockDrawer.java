@@ -60,14 +60,14 @@ public class ColorBlockDrawer implements IBlockDrawer {
 
     @Override
     public void draw(float tx, float ty, BlockDrawParameters p) {
-        // Grundfläche
+        // 바닥 공간
         float l = tx * p.getF();
         float o = ty * p.getF();
         float r = (tx + p.getBr()) * p.getF();
         float u = (ty + p.getBr()) * p.getF();
         p.getCanvas().drawRect(l, o, r, u, backgroundPaint);
 
-        // Hauptfläche
+        // main surface
         final float a = 1f;
         l = (tx + a) * p.getF();
         o = (ty + a) * p.getF();
@@ -75,7 +75,7 @@ public class ColorBlockDrawer implements IBlockDrawer {
         u = (ty + p.getBr() - a) * p.getF();
         p.getCanvas().drawRect(l, o, r, u, paint);
 
-        // weißes Kästchen oben links
+        // 왼쪽 상단의 흰색 상자
         float b = 3f;
         r = (tx + b) * p.getF();
         u = (ty + b) * p.getF();

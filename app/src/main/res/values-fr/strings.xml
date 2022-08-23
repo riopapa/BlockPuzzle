@@ -101,4 +101,5 @@
     <string name="defeatedEnemyAndPlanetLiberated">Ennemi défait! Planète libérée!</string>
     <string name="undo">Annuler</string>
     <string name="planetNo">Planète %1$d</string>
+    <string name="empty">empty</string>
 </resources>

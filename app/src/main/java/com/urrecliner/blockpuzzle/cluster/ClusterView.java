@@ -61,7 +61,7 @@ public class ClusterView extends View {
         linePaint.setColor(getResources().getColor(R.color.quadrant));
         linePaint.setStrokeWidth(4f);
         line2Paint = new Paint();
-        line2Paint.setColor(getResources().getColor(R.color.colorGrey));
+        line2Paint.setColor(getResources().getColor(R.color.colorGreyHa));
         line2Paint.setStrokeWidth(2f);
         line2Paint.setPathEffect(new DashPathEffect(new float[] {4f, 27f}, 0f));
         quadrantPaint = new Paint();

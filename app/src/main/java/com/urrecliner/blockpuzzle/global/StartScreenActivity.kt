@@ -32,8 +32,9 @@ class StartScreenActivity : AppCompatActivity() {
             println("Migration finished.")
         }
 
-        stoneWars.setOnClickListener { onStoneWars() }
-        oldGame.setOnClickListener { onOldGame() }
+//        stoneWars.setOnClickListener { onStoneWars() }    // ha off
+//        oldGame.setOnClickListener { onOldGame() }
+        onOldGame();
     }
 
     override fun onResume() {

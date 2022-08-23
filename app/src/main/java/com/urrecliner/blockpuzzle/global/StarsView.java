@@ -46,13 +46,15 @@ public class StarsView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        final int w = getWidth();
-        final int h = getHeight();
-
-        for (int i = 0; i < 100; i++) {
-            int x = r.nextInt(w);
-            int y = r.nextInt(h);
-            canvas.drawCircle(x, y, 3, paint);
-        }
+//        final int w = getWidth();
+//        final int h = getHeight();
+//        final Paint paint = new Paint();
+//        paint.setColor(Color.YELLOW);
+//        canvas.drawRect(1,1, w-2, h-2, paint);
+//        for (int i = 0; i < 100; i++) {
+//            int x = r.nextInt(w);
+//            int y = r.nextInt(h);
+//            canvas.drawCircle(x, y, 3, paint);
+//        }
     }
 }

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name"><font size="18"><b>Block Puzzle</b></font></string>
     <string name="version">7.0</string>
-    <string name="startScreenTitle">Version 7.0 by SoltauFintel</string>
+    <string name="startScreenTitle">Version 1.0 by 하원철</string>
     <string name="neuesSpiel">New Game</string>
     <string name="gehtNicht">Does not fit!</string>
     <string name="startNewGame">Start new game?</string>
@@ -14,7 +14,6 @@
     <string name="move">move</string>
     <string name="moves">moves</string>
     <string name="save">Save</string>
-    <string name="empty"/>
     <string name="leaveShipInSpace">Really quit game?</string>
     <string name="stoneWars">Stone Wars</string>
     <string name="oldGame">Old Game</string>
@@ -100,5 +99,6 @@
     <string name="giveUpDeathStarGameQuestion">Give up Death Star destruction and go back to the Y galaxy?</string>
     <string name="defeatedEnemyAndPlanetLiberated">Enemy defeated! Planet liberated!</string>
     <string name="undo">Undo</string>
+    <string name="empty">empty</string>
     <string name="planetNo">Planet %1$d</string>
 </resources>

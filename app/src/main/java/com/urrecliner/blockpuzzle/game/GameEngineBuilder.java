@@ -27,7 +27,7 @@ import com.urrecliner.blockpuzzle.playingfield.gravitation.GravitationData;
  * Initialization of GameEngine
  */
 public class GameEngineBuilder {
-    public static final int blocks = 10; // TO-DO später mal die Zugriffe hier drauf prüfen
+    public static final int blocks = 10; // TO-DO check access here later
     protected final BlockTypes blockTypes = new BlockTypes(null);
     protected IGameView view;
     protected GameState gs;
@@ -110,7 +110,7 @@ public class GameEngineBuilder {
     protected void newGame() {
         doNewGame();
         gameEngine.offer(true);
-        gameEngine.save(); // TO-DO gs.save() in doNewGame() und save() hier; schauen ob das anders geht
+        gameEngine.save(); // TO-DO gs.save() in doNewGame() und save() here; see if that works differently
     }
     protected void doNewGame() {
         gs.newGame();

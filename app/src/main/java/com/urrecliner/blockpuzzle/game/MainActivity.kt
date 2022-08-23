@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity(), IGameView {
             TopButtonMode.UNDO -> {
                 newGame.visibility = View.VISIBLE
                 newGame.setText(R.string.undo)
-                newGame.setBackgroundColor(ContextCompat.getColor(this, R.color.colorGrey))
+                newGame.setBackgroundColor(ContextCompat.getColor(this, R.color.colorGreyHa))
             }
             TopButtonMode.NO_BUTTON -> newGame.visibility = View.INVISIBLE
             else -> newGame.visibility = View.VISIBLE

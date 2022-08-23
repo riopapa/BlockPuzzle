@@ -22,16 +22,17 @@ import com.urrecliner.blockpuzzle.game.GameEngineBuilder;
 import com.urrecliner.blockpuzzle.sound.SoundService;
 
 /**
- * Das Spielfeld ist ein 10x10 großes Quadrat.
- * Im Spielfeld werden die Spielsteine abgelegt.
- * Ein Kästchen hat die Belegung 0=leer, 1=Block. Angedacht sind weitere Belegungen für Boni.
- * Werte ab 30 haben eine Sonderrolle für die Darstellung.
+ * 경기장은 10x10 정사각형입니다.
+ * 게임 조각은 경기장에 배치됩니다.
+ * 상자에는 0=비어 있음, 1=블록 할당이 있습니다. 보너스에 대한 추가 할당이 계획되어 있습니다.
+ * 30부터 값은 디스플레이에 특별한 역할을 합니다.
  *
- * Das Spielfeld ist 300dp groß. Nach unten ist es 2 Reihen (60dp) größer, damit Drag&Drop
- * funktioniert.
- */
+ * 경기장은 300dp입니다. 아래로 2행(60dp) 더 크므로 드래그 앤 드롭
+ * 작업 중입니다.
+ **/
+
 public class PlayingFieldView extends View implements IPlayingFieldView {
-    public static final int w = 300; // dp
+    public static final int w = 360; // dp
     private PlayingField playingField;
     private final Paint rectborder = new Paint();
     private final Paint rectline = new Paint();
@@ -78,7 +79,7 @@ public class PlayingFieldView extends View implements IPlayingFieldView {
         rectline.setStrokeWidth(1);
         rectline.setColor(rectborder.getColor());
 
-        grey = ColorBlockDrawer.byRColor(this, R.color.colorGrey, R.color.colorGrey_i, R.color.colorGrey_ib);
+        grey = ColorBlockDrawer.byRColor(this, R.color.colorGreyHa, R.color.colorGrey_iHa, R.color.colorGrey_ib);
         bd30 = new ColorBlockDrawer(this, getResources().getColor(R.color.explosion30));
         bd31 = new ColorBlockDrawer(this, getResources().getColor(R.color.explosion31));
         bd32 = new ColorBlockDrawer(this, getResources().getColor(R.color.explosion32));
@@ -165,7 +166,7 @@ public class PlayingFieldView extends View implements IPlayingFieldView {
             return (x, y) -> playingField.get(x, y) > 0 ? grey : empty;
         }
         final BlockDrawerStrategy std = getStdMatrixGet();
-        if (filledRows != null) { // row ausblenden Modus
+        if (filledRows != null) { // row hidden mode
             return (x, y) -> {
                 if (!filledRows.getExclusions().contains(new QPosition(x, y)) && (filledRows.containsX(x) || filledRows.containsY(y))) {
                     switch (mode) {

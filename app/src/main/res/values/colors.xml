@@ -52,9 +52,9 @@
     <color name="lockBlock">#660000</color>
     <color name="starBlockForeground">#FFFF00</color>
     <color name="starBlockBackground">#CC0000</color>
-    <color name="explosion30">#ffdd00</color>
-    <color name="explosion31">#ff0000</color>
-    <color name="explosion32">#bbbbbb</color>
+    <color name="explosion30">#978515</color>
+    <color name="explosion31">#5224AF</color>
+    <color name="explosion32">#6A5757</color>
 
     <color name="colorParking">#1E1E1E</color>
     <color name="colorParkingHover">#555555</color>
@@ -72,5 +72,11 @@
     <color name="appTitleForecolor">#FFFF00</color>
     <color name="navigationBackground">#000000</color>
     <color name="spaceNebula">#333344</color>
+
+    <color name="colorParkingHoverHa">#88FF33</color>
+    <color name="colorGreyHa">#678833</color>
+    <color name="colorGrey_iHa">#888833</color>
+    <color name="colorGrey_ibHa">#888833</color>
+    <color name="colorParkingHa">#FE7E7E</color>
 
 </resources>

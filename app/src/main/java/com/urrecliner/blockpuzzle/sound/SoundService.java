@@ -12,7 +12,7 @@ import com.urrecliner.blockpuzzle.R;
 import com.urrecliner.blockpuzzle.global.GlobalData;
 
 public class SoundService implements ISoundService {
-    private boolean on;
+    private boolean on = false;
     private SoundPool soundPool;
     private int crunch;
     private int money;
@@ -28,7 +28,7 @@ public class SoundService implements ISoundService {
     /** init SoundService */
     @SuppressLint("ObsoleteSdkInt") // falls ich das API Level senken sollte
     public void init(Context context) {
-        on = GlobalData.get().isGameSounds();
+//        on = GlobalData.get().isGameSounds();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             AudioAttributes audioAttributes = new AudioAttributes.Builder()
                     .setUsage(AudioAttributes.USAGE_GAME)
